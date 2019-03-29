@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+        <title>basic of html</title>
+        <body bgcolor="green">
+            welcome to my world 
+            <br>
+            i am <b><i><font color= white>sudheer</i></b></font>
+            <br>
+            <strike>this one</strike> 
+            <img src="download.jpg"width=200 height="200"> 
+            
+                <h1>
+                    first day
+                </h1>
+                <p>
+                    hi surya 
+
+                </p>
+                <dfn>
+                    loss of value emotion is called love
+                </dfn>
+                <table border="2">
+                    <caption style= "border: 2px solid white">employee details</caption style>
+                    <tr>
+                       
+                            <th>employee</th>
+                            <th>age</th>
+                            <th>name</th>
+                    </tr>
+                    <tr>
+                            <th>122</th>
+                            <th>30</th>
+                            <th>nani</th>
+                    </tr>
+                    <tr>
+                            <th>00</th>
+                            <th>55</th>
+                            <th>ss</th>
+                    </tr>
+                </table>
+            
+
+        </body>
+
+            
+
+    </head>
+</html>
