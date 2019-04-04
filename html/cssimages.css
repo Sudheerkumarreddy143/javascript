@@ -1,0 +1,11 @@
+img[title="arjun"]
+{
+border: 2px red solid;
+
+}
+img[height]{
+    border:4px solid blue;
+}
+img[width]{
+    border:5px yellow solid;
+}
