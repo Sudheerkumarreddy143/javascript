@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>operatorsand arithematic expression</title>
+    <title>Date and time</title>
 </head>
 <body>
-          ------------------------------------------------<br>
-          ************calculate compound interest***********<br>
-          -------------------------------------------------<br>
-          <script>
-              var p=1000;
-              var r=10;
-              var n=1;
-              var c;
-              c=(p*Math.pow(1+(r/100),n))-p
-              document.write("prinicipal-"+p);
-              document.write("<br>");
-              document.write("rate of intrest-"+r);
-              document.write("<br>");
-              document.write("period-"+1);
-              document.write("<br>");
-              document.write("comp intrest-"+c);
-          </script>
+    <script>
+        var d=new Date();
+        document.write(d);
+        
 
-
+        if(d.gethours<12)
+        {
+            document.write("good morning");
+        }
+        else if(d.gethours>=12 && d.gethours<=17)
+        {
+            document.write("good afternoon");
+        }
+        else(d.gethours>17)
+        {
+            document.write("good evening")
+        }
+        </script>
     
 </body>
 </html>
