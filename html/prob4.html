@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>embedding script tag in html document</title>
+    <script>
+    document.write("this text is displayed from the script tag embedded inthe head tah of the document")</script>
+    <hr>
+    <script src="helloworld.js"></script>
+</head>
+<body>
+    <script> 
+        document.write(" <i>this text is displayed from the script tag embeeded in the body tag of the document</i>")
+        </script>
+        <hr>
+        <p>the actual script is external script file is caleed helloworld.jd </p>
+        <script>
+            document.write("this text is displayed by calling external function:")
+            sayhello();
+        </script>
+</body>
+    
