@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var mywin;
+    function nwindow(){
+        var w=parseInt(document.getElementById("wid").value);
+        var h=parseInt(document.getElementById("hei").value);
+
+        mywin=window.open("","kgf","width="+w+",height="+h);
+        mywin.document.write("hello")
+
+    }
+</script>
+</head>
+<body>
+    <form>
+ <center>
+    <table border="1" bordercolor="blue" cellpadding="10" cellspacing="10">
+        <tr>
+            
+                <td colspan="4" style="text-align:center"><h1>create a new window</h1></td>
+            </tr>
+            <tr>
+            
+                    <td colspan="4" style="text-align: center">window size</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                   <td> <input type="text" id="wid"></td>
+                    <td>height</td>
+                    <td><input type="text" id="hei"></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align:center">position</td>
+                </tr>
+                <tr>
+                    <td>
+                        left
+                    </td>
+                    <td><input type="text" id="left"></td>
+                    <td>top</td>
+                    <td><input type="text"id ="top"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="button" value="new window" onclick="nwindow()"></td>
+                    <td><input type="reset" value="reset"></td>
+                </tr>
+
+        </table>
+    </center>
+</form>
+    
+</body>
+</html>
