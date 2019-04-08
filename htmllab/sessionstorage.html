@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+    var result;
+    function store(){
+
+        var empid=document.getElementById("empid").value;
+        var empname=document.getElementById("empname").value;
+        var salary=document.getElementById("sal").value;
+        if(window.sessionStorage){
+            sessionStorage.setItem("id",empid);
+            sessionStorage.setItem("name",empname);
+            sessionStorage.setItem("empsal",salary);
+            displayresult();
+        }
+        else {
+            result="session storage not supported";
+            document.getElementById("mydiv").innerHTML=result;
+        }
+
+    }
+    function displayresult(){
+        var empid=sessionStorage.getItem("id");
+        var empname=sessionStorage.getItem("name");
+        var sal=sessionStorage.getItem("empsal");
+        result="employee id"+empid+"<br>employee name :"+empname+"<br>salary: "+sal;
+        document.getElementById("mydiv").innerHTML=result;
+
+    }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>employee id</td>
+            <td><input type="text" id="empid"/></td>
+
+    
+        </tr>
+        <tr>
+            <td>employee name</td>
+            <td><input type="text" id="empname"/></td>
+
+    
+        </tr>
+        <tr>
+            <td>salary</td>
+            <td><input type="text" id="sal"/></td>
+
+    
+        </tr>
+    
+    </table> 
+    <input type="button" value="storage" onclick="store();"/>
+    <input type="reset" value="clear"/>
+    <div id="mydiv">
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body bgcolor="white">
+    <center>
+        <h1>user registration form </h1>
+        <form action="successful.html" method="POST">
+            <table style="background-color:chartreuse">
+                
+                <tr>
+                    <th>first name:</th>
+                    <td>
+                        <input type="text" id="fname" name="fname" required
+                        pattern="[A-Z][A-Za-z]{2,}" title="first alphabet must be capital" />
+                        <span style="color:chartreuse">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>last name*:</th>
+                    <td>
+                        <input type="text" id="lname" name="lname" required/>
+                        <span style="color:brown">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>password</th>
+                    <td>
+                        <input type="text" id="uid" name="frame" maxlength="5"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>gender</th>
+                    <td>
+                        <input type="radio" name="male"/>male
+                        <input type="radio" name="female"/>female
+                    </td>
+                </tr>
+                <tr>
+                    <th>mobile number</th>
+                    <td>
+                        <input type="text"  pattern="[6-9][\d]{10}" />
+                        
+                    </td>
+                </tr>
+                <tr>
+                        <th>email id</th>
+                        <td>
+                            <input type="email" pattern="[a-z_\.0-9]+@[a-z0-9]+\.com" title="invaild data">
+                            
+                        </td>
+                    </tr>
+                <tr>
+                    <th>skills</th>
+                    <td>
+                        <input type="checkbox"  name="skills"/>java
+                        <input type="checkbox"  name="skills"/>css
+                        <input type="checkbox"  name="skills"/>html
+                    </td>
+                </tr>
+                <tr>
+                    <th>city</th>
+                    <td>
+                        <select multiple>
+                        <option>mumbai</option>
+                        <option selected>delhi </option>
+                        <option> pune</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>comments</th>
+                    <td>
+                        <textarea name="comment" rows="4" cols="20">
+                    </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>resume</th>
+                    <td>
+                        <input type="file"  name="resume"/>
+                    </td>
+                </tr>
+
+            </table>
+            <input type="submit" value="register"/>
+            <input type="reset" value="clear"/>
+        </form>
+        </center>
+</body>
+</html>
