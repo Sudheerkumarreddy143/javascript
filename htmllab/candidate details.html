@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <center><b>Candidate Information<b></center>
+        <form >
+<center><table border="1" style="background-color:cyan"></center>
+    <tr>
+        <td>Name:<sup><font color="red">*</font></sup></td>
+        <td><input type="text" id="name" maxlength="15"></td>
+    </tr>
+    <tr>
+        <td>password:<font color="red">*</font></td>
+        <td><input type="password" id="pass" ></td>
+    </tr>
+    <tr>
+        <td>phonenumber:<font color="red">*</font></td>
+        <td><input type="text" id="phnum" maxlength="10"</td>
+    </tr>
+    <tr>
+        <td>Gender:<font color="red">*</font></td>
+        <td><input type="radio" id="gender">male
+        <input type="radio" id="gender">female</td>
+    </tr>
+    <tr>
+        <td>DateofBirth:<font color="red">*</font></td>
+        <td><input type="date" id="dob"> </td>
+    </tr>
+    <tr>
+        <td>email:<font color="red">*</font></td>
+        <td><input type="text" id="email" required pattern="[A-Za-z\.]+@[a-z]+.com"></td>
+                    </tr>
+                    <tr>
+                        <td>Highest Qualification</td>
+                        <td><select name="qualification">
+                            <option>Select Highest Qualification</option>
+                            <option>B.Tech</option>
+                            <option>inter</option>
+                            <option>ssc</option>
+                        </select></td>
+                    </tr>
+        <tr>
+            <td>Courses Interested in:<font color="red">*</font></td>
+            <td><input type="checkbox" id="course">JAVA
+                <input type="checkbox" id="course">HTML5
+                <input type="checkbox" id="course">CSS 
+                <input type="checkbox" id="course">Angular JS
+                <input type="checkbox" id="course">JQuery       
+            </td>
+        </tr>
+        <tr>
+            <td>Comments:(Mention External Certifications if any)</td>
+            <td><textarea name="certifications" rows="5" cols="50"></textarea></td>
+        </tr>
+        <tr>
+            <td>Upload Degree/External Certificates:<font color="red">*</font></td>
+            <td><input type="file"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td><input type="submit">
+            <input type="reset"></td>
+            
+        </tr>
+</table>
+<font color="red">all fileds marked(*) are mandatory</font>
+        </form>
+        
+</body>
+</html>
