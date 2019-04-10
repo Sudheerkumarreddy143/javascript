@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <title>practise</title>
+        <style>
+            div{
+                background-color: aqua;
+                height: 400px;
+                width:500px;
+                box-shadow: 10px 10px 10px;
+            }
+        </style>
+        <script>
+            function c(){
+                var x=document.getElementById("fun").value;
+                var str;
+        if(x=="itinfrastructure")  
+        {
+       
+        str="<option>audio/video/webpresentation</option><option>acessrights</option><option>asset allocation</option><option>network</option><option>printer</option>"
+        }
+    if(x=="admin"){
+    str="<option>acess control</option><option>air conditioning</option><option>food and cafiteria</option><option>cctv and full alarm</optionn><option>house keeping</option>"
+    }
+    if(x=="transportandtravel")
+    {
+    str="<option>bus transport</option> <option>cab transport</option> <option>domestic travel</option> <option>international travel</option>"
+    }
+    document.getElementById("category").innerHTML=str;
+    }
+    
+                function succ(){
+                    var res;
+                    var res1;
+                    var res2;
+                    var res3;
+                    var result;
+                    res=document.getElementById("eid").value;
+                    res1=document.getElementById("ename").value;
+                    
+                    res2=document.getElementById("mob").value;
+                    res3=document.getElementById("date").value
+                    result= "employee id - "+res+"\n employeename -"+res1+"\mobile - "+res2+"\ndate -"+date;
+                    alert(result);
+                }
+            </script>
+    </head>
+    <body>
+        <center>
+        <div>
+        <form>
+            <table border="2">
+                <caption>enter details to raise ticket</caption>
+                <tr>
+                    <th>emplyee id</th>
+                    <td>
+                        <input type="number" id="eid" placeholder="enter numbers only" pattern="[1-9]{6}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>employee name</th>
+                    <td>
+                        <input type="text" id="ename" placeholder="enter alphabets only" minlength="5" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>function</th>
+                    <td>
+                        <select id="fun" onchange="c()">
+                                <option>select function</option>
+                            <option>itinfrastructure</option>
+                            <option>admin</option>
+                            <option>transportandtravel</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>categories</th>
+                    
+        <td><select id="category" required>
+            <option>------choose category---------</option>
+        <option>audio/video/webpresentation</option>
+        <option>acess rights</option>
+        <option>asset allocation</option>
+        <option>network</option>
+        <option>printer</option>
+        <option>acess control</option>
+        <option>air conditioning</option>
+        <option>food and cafiteria</option>
+        <option>cctv and full alarm</option>
+        <option>house keeping</option>
+         <option>bus transport</option>
+         <option>cab transport</option>
+         <option>domestic travel</option>
+         <option>international travel</option>
+         </select>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <th>priority</th>
+                    <td>
+                        <input type="radio"name="priority" required/>high
+                        <input type="radio" name="priority" required/>medium
+                        <input type="radio" name="priority" required/>low
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        description
+                    </th>
+                    <td>
+                        <input type="textbox" name="desc" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        ticket raised date
+                    </th>
+                    <td><input type="date" name="date" id="date" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>mobile number</th>
+                    <td>
+                        <input type="number" id="mob" pattern="[9][/d]{10}"placeholder="numbers only" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>multiple users/systems impacted</th>
+                    <td>
+                        <input type="checkbox" id="musi" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center">
+                        <input type="submit" value="raise ticket" onclick="succ()" id="rid" >
+                        <input type="reset" value="clear">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</center>
+    </body>
+</html>
