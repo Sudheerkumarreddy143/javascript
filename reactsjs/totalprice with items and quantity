@@ -1,0 +1,107 @@
+import React ,{Component} from 'react';
+class App extends Component{
+  
+  costOfitem;
+  quantity;
+  totalprice;
+  constructor(){
+    super();
+    this.costOfitem=0;
+    this.quantity=0;
+    this.totalprice=0
+
+    this.state={
+      items:this.costOfitem,
+      totalQuantity:this.quantity,
+      totalcost:this.totalprice
+    }
+  }
+  finalprice(){
+    this.totalprice=(this.costOfitem*this.quantity)
+    this.setState({
+      totalcost:this.totalprice
+    })
+  }
+  increasingitem(){
+    this.costOfitem++;
+    this.finalprice()
+    this.setState({
+      items:this.costOfitem,
+      
+      totalcost:this.totalprice,
+      
+    })
+
+  }
+  decreasingitem(){
+    if(this.costOfitem>0)
+    this.costOfitem--;
+    this.finalprice()
+    this.setState({
+      items:this.costOfitem,
+  
+      totalcost:this.totalprice
+    })
+
+  }
+  increasingquantity(){
+    this.quantity++;
+    this.finalprice()
+    this.setState({
+      totalQuantity:this.quantity,
+      
+      totalcost:this.totalprice
+    })
+
+  }
+  decreasingquantity(){
+    if(this.quantity>0)
+    this.quantity--;
+    this.finalprice()
+    this.setState({
+      totalQuantity:this.quantity,
+      
+      totalcost:this.totalprice
+    })
+
+  }
+  render() {
+    return (
+      <div className="container">
+        <div className="jumbotron py-5 my-4 bg-success">
+          <p className="display-4 text-center mb-0">total price</p>
+        </div>
+        <div class="d-flex justify-content-around">
+        <div>
+          <h6>items</h6>
+          <button className="btn btn-info" onClick={() => this.decreasingitem()}>
+          <i className="fas fa-minus"></i>
+          </button>
+          <span className="mx-4">{this.state.items}</span>
+          <button className="btn btn-fail" onClick={() => this.increasingitem()}>
+            <i className="fas fa-plus"></i>
+          </button>
+        </div>
+
+
+        <div>
+          <h6>quanity</h6>
+          <button className="btn btn-success" onClick={() => this.decreasingquantity()}>
+            <i className="fas fa-minus"></i>
+          </button>
+          <span className='mx-3'>{this.state.totalQuantity}</span>
+          <button className="btn btn-danger" onClick={() => this.increasingquantity()}>
+            <i className="fas fa-plus"></i>
+          </button>
+          
+        </div>
+        <div>
+          finalprice={this.state.totalcost}
+        </div>
+        </div>
+      </div>
+    
+    );
+  }
+}
+export default App;
